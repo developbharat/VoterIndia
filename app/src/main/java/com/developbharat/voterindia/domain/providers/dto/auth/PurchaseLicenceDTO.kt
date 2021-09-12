@@ -1,5 +1,6 @@
 package com.developbharat.voterindia.domain.providers.dto.auth
 
-data class ActivateLicenceDTO(
+data class PurchaseLicenceDTO(
     val success: Boolean,
+    val message: String
 )

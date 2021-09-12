@@ -20,6 +20,6 @@ interface IAuthAPI {
     @POST("/validate-licence")
     suspend fun validateLicence(@Field("mobile") mobile: String, @Field("licence") licence: String): ValidateLicenceDTO
 
-    @POST("/activate-licence")
-    suspend fun activateAccountViaLicence(@Field("mobile") mobile: String, @Field("licence") licence: String): ActivateLicenceDTO
+    @POST("/purchase-licence")
+    suspend fun purchaseLicence(@Field("mobile") mobile: String): PurchaseLicenceDTO
 }

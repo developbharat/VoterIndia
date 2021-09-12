@@ -27,8 +27,7 @@ class AuthRepository @Inject constructor(
         return api.validateLicence(mobile=mobile, licence=licence).success
     }
 
-    override suspend fun activateLicence(mobile: String, licence: String): Boolean {
-        return api.activateAccountViaLicence(mobile = mobile, licence=licence).success
+    override suspend fun purchaseLicence(mobile: String): Boolean {
+        return api.purchaseLicence(mobile = mobile).success
     }
-
 }

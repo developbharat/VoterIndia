@@ -1,6 +1,7 @@
 package com.developbharat.voterindia.domain.providers.repos.auth
 
 import com.developbharat.voterindia.domain.models.auth.User
+import com.developbharat.voterindia.domain.models.auth.UserAccountLicence
 
 
 interface IAuthRepository {
@@ -16,5 +17,7 @@ interface IAuthRepository {
 
     // Licence Screen
     suspend fun isLicenceValid(mobile: String, licence: String): Boolean
-    suspend fun activateLicence(mobile: String, licence: String): Boolean
+    suspend fun requestPurchaseLicence(mobile: String, upiId: String): Boolean
+    suspend fun checkUpiStatus(mobile: String): UserAccountLicence
+    // TODO: change it to support licence purchase via upi id.
 }
