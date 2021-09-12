@@ -9,8 +9,8 @@ data class CreateAccountDTO(
     val name: String,
     @SerializedName("is_licenced")
     val isLicenced: Boolean
-){
-    fun toUser(): User{
+) {
+    fun toUser(): User {
         return User(
             id = id,
             mobile = mobile,

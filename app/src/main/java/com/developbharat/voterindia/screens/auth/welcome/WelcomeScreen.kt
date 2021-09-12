@@ -1,7 +1,10 @@
 package com.developbharat.voterindia.screens.auth.welcome
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material.OutlinedButton
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -15,14 +18,18 @@ fun WelcomeScreen(
     Scaffold(
         topBar = { TopAppBar(title = { Text("Welcome Friend") }) },
         content = {
-            Box(modifier = Modifier
-                .fillMaxSize()
-                .padding(5.dp)){
-                Column(modifier= Modifier
-                    .fillMaxWidth()
-                    .padding(10.dp)) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(5.dp)
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(10.dp)
+                ) {
                     OutlinedButton(
-                        modifier= Modifier.fillMaxWidth(),
+                        modifier = Modifier.fillMaxWidth(),
                         onClick = { navController.navigate(AuthRoutes.MobileAuthScreen.route) }
                     ) { Text("SIGN IN") }
                     Spacer(modifier = Modifier.height(10.dp))

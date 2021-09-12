@@ -17,7 +17,7 @@ import javax.inject.Singleton
 object RootModule {
     @Provides
     @Singleton
-    fun provideAuthAPI(): IAuthAPI{
+    fun provideAuthAPI(): IAuthAPI {
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_API_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -27,7 +27,7 @@ object RootModule {
 
     @Provides
     @Singleton
-    fun provideAuthRepository(api: IAuthAPI): IAuthRepository{
+    fun provideAuthRepository(api: IAuthAPI): IAuthRepository {
         return AuthRepository(api)
     }
 }

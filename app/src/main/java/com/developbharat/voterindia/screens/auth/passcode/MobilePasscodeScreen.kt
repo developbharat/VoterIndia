@@ -6,7 +6,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.developbharat.voterindia.common.routes.AuthRoutes
 
 @Composable
 fun MobilePasscodeScreen(
@@ -15,8 +14,12 @@ fun MobilePasscodeScreen(
     Scaffold(
         topBar = { TopAppBar(title = { Text("Mobile Passcode") }) },
         content = {
-            Box(modifier = Modifier.fillMaxSize().padding(5.dp)){
-                Column(modifier= Modifier.fillMaxSize().padding(10.dp)) {
+            Box(modifier = Modifier
+                .fillMaxSize()
+                .padding(5.dp)) {
+                Column(modifier = Modifier
+                    .fillMaxSize()
+                    .padding(10.dp)) {
                     OutlinedTextField(
                         modifier = Modifier.fillMaxWidth(),
                         value = "256856",

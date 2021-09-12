@@ -14,8 +14,12 @@ fun CreateAccountScreen(
     Scaffold(
         topBar = { TopAppBar(title = { Text("Create Account") }) },
         content = {
-            Box(modifier = Modifier.fillMaxSize().padding(5.dp)){
-                Column(modifier= Modifier.fillMaxSize().padding(10.dp)) {
+            Box(modifier = Modifier
+                .fillMaxSize()
+                .padding(5.dp)) {
+                Column(modifier = Modifier
+                    .fillMaxSize()
+                    .padding(10.dp)) {
                     OutlinedTextField(
                         modifier = Modifier.fillMaxWidth(),
                         value = "Jayant Malik",

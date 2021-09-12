@@ -15,13 +15,17 @@ fun MobileAuthScreen(
     Scaffold(
         topBar = { TopAppBar(title = { Text("Mobile Authentication") }) },
         content = {
-            Box(modifier = Modifier.fillMaxSize().padding(5.dp)){
-                Column(modifier= Modifier.fillMaxSize().padding(10.dp)) {
+            Box(modifier = Modifier
+                .fillMaxSize()
+                .padding(5.dp)) {
+                Column(modifier = Modifier
+                    .fillMaxSize()
+                    .padding(10.dp)) {
                     OutlinedTextField(
                         modifier = Modifier.fillMaxWidth(),
                         value = "+91",
                         onValueChange = {},
-                        label = {Text("Mobile Number")}
+                        label = { Text("Mobile Number") }
                     )
                     Spacer(modifier = Modifier.height(10.dp))
                     OutlinedButton(

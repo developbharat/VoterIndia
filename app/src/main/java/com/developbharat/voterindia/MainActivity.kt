@@ -27,13 +27,40 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     val navController = rememberNavController()
-                    NavHost(navController = navController, startDestination = AuthRoutes.WelcomeScreen.route){
-                        composable(route=AuthRoutes.WelcomeScreen.route){ WelcomeScreen(navController=navController) }
-                        composable(route=AuthRoutes.MobileAuthScreen.route){ MobileAuthScreen(navController=navController) }
-                        composable(route=AuthRoutes.MobilePasscodeScreen.route){ MobilePasscodeScreen(navController=navController) }
-                        composable(route=AuthRoutes.CreateAccountScreen.route){ CreateAccountScreen(navController=navController) }
-                        composable(route=AuthRoutes.LicenceActivationScreen.route){ LicenceActivationScreen(navController=navController) }
-                        composable(route=AuthRoutes.PurchaseLicenceScreen.route){ LicencePurchaseScreen(navController=navController) }
+                    NavHost(
+                        navController = navController,
+                        startDestination = AuthRoutes.WelcomeScreen.route
+                    ) {
+                        composable(route = AuthRoutes.WelcomeScreen.route) {
+                            WelcomeScreen(
+                                navController = navController
+                            )
+                        }
+                        composable(route = AuthRoutes.MobileAuthScreen.route) {
+                            MobileAuthScreen(
+                                navController = navController
+                            )
+                        }
+                        composable(route = AuthRoutes.MobilePasscodeScreen.route) {
+                            MobilePasscodeScreen(
+                                navController = navController
+                            )
+                        }
+                        composable(route = AuthRoutes.CreateAccountScreen.route) {
+                            CreateAccountScreen(
+                                navController = navController
+                            )
+                        }
+                        composable(route = AuthRoutes.LicenceActivationScreen.route) {
+                            LicenceActivationScreen(
+                                navController = navController
+                            )
+                        }
+                        composable(route = AuthRoutes.PurchaseLicenceScreen.route) {
+                            LicencePurchaseScreen(
+                                navController = navController
+                            )
+                        }
                     }
                 }
             }
